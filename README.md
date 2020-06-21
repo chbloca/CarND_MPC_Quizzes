@@ -29,6 +29,7 @@ Notice the result of Delta (radians) saturates inside the interval defined by 20
 This can be achieved by setting a factor > 1 to the following [line](https://github.com/chbloca/CarND_MPC_Quizzes/blob/4939e0be285cabc7ae3ca47dec26a05289186d0c/mpc_to_line/src/MPC.cpp#L79) of code:
 
 `fg[0] += FACTOR * CppAD::pow(vars[delta_start + t + 1] - vars[delta_start + t], 2);`
+
 For the following case FACTOR was 100.
 
 ![Tunned cost function affecting the steering](Figure_2.png)
